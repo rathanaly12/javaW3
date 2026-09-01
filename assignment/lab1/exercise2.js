@@ -23,3 +23,15 @@
    ================================================================ */
 
 // Write your code below.
+let colors=["Red","Green","Blue"];
+firstcolor =colors[0];
+lastcolor= colors.at(-1);
+colorCount =colors.length;
+colors[1]="Emerald";
+colors[3]="Yellow";
+let mixedArr=["Apple",11,true];
+console.log("colors:"+"["+colors[0]+","+colors[1]+","+colors[2]+","+colors[3]+"]");
+console.log("firstColor: ",firstcolor);
+console.log("lastcolor: ",lastcolor);
+console.log("colorCount: ",colorCount);
+console.log("mixedArr: "+"["+mixedArr[0]+","+mixedArr[1]+","+mixedArr[2]+ "]");

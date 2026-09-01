@@ -28,3 +28,45 @@
    ================================================================ */
 
 // Write your code below.
+function add(a,b){
+  console.log("resultAdd: ",a+b);
+}
+add(4,3);
+
+
+//2
+function subtract(a,b){
+  console.log("resultSubstract: ",a-b);
+}
+subtract(7,1);
+
+
+//3
+const multiply= (a,b) => a*b;
+console.log("resultMultiply: " ,multiply(3,5));
+
+
+//4
+const double=n =>n*2;
+console.log("resultDouble: ",double(6));
+
+//5
+const divide =(a,b) =>{
+  console.log("resultDivide: ",a/b);
+}
+divide(15,3);
+
+//6 
+function greet(name="lyrathana"){
+  console.log("Heloo ,"+name+"!");
+}
+greet();
+//7
+function announcement(name,callback){
+  console.log("greet",name,":","Hello,"+name+"!");
+  callback();
+}
+function sayBye(){
+  console.log("Goodbye!");
+}
+announcement("lyrathana",sayBye);

@@ -31,3 +31,6 @@
    ================================================================ */
 
 // Write your code below.
+let fruits=["apple","banana"];
+fruits.push=("cherry","date");
+fruits.unshift
