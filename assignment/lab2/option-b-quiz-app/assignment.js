@@ -115,7 +115,8 @@ function showFinalResult(playerName, score, total) {
      return cleaned === question.answer;
    ================================================================= */
 function checkAnswer(question, userAnswer) {
-
+  const cleaned = (userAnswer || "").trim().toUpperCase();
+  return cleaned === question.answer;
 }
 
 
@@ -141,7 +142,21 @@ function checkAnswer(question, userAnswer) {
      inside them.
    ================================================================= */
 function runQuiz(questions, playerName, onQuestion, onAnswered) {
+  let score = 0;
 
+    questions.forEach((question, index) => {
+        onQuestion(question, index + 1, questions.length);
+        const userAnswer = prompt(question.question + "\n" + question.choices.join("\n") +"\nYour answer (A/B/C):");
+        const isCorrect = checkAnswer(question, userAnswer);
+
+        if (isCorrect) {
+            score++;
+        }
+
+        onAnswered(isCorrect, question, score, questions.length);
+    });
+
+    return score;
 }
 
 

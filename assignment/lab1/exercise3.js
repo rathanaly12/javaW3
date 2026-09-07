@@ -32,5 +32,22 @@
 
 // Write your code below.
 let fruits=["apple","banana"];
-fruits.push=("cherry","date");
-fruits.unshift
+fruits.push("cherry","date");
+fruits.unshift("avocado");
+let poppedFruit=fruits.pop();
+let shiftedFruit=fruits.shift();
+const upperFruits=fruits.map((item)=> item.toUpperCase());
+const longFruits = fruits.filter(name=> name.length>5);
+let fruitList="";
+fruits.forEach((item,index,array)=>{
+   fruitList+=item;
+   if(index<array.length-1){
+      fruitList+=",";
+   }
+});
+console.log(fruits);
+console.log(poppedFruit);
+console.log(shiftedFruit);
+console.log(upperFruits);
+console.log(longFruits);
+console.log(fruitList);
